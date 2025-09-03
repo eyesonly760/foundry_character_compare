@@ -32,7 +32,7 @@ class CharacterDiffApp extends Application {
         return mergeObject(super.defaultOptions, {
             id: "character-diff-app", // Unique ID for the application window
             title: "Character Sheet Diff Tool", // Title of the application window
-            template: "modules/foundry-character-compare/templates/diff-viewer.html", // Path to the HTML template
+            template: "modules/foundry_character_compare/templates/diff-viewer.html", // Path to the HTML template
             width: 900, // Default width of the window
             height: 600, // Default height of the window
             resizable: true, // Allow the window to be resized
