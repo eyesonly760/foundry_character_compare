@@ -13,7 +13,7 @@
     "minimum": "11",
     "verified": "11"
   },
-  "esmodules": ["module.js"],
+  "esmodules": ["foundry_character_compare.js"],
 
   "manifest": "https://raw.githubusercontent.com/eyesonly760/foundry_character_compare/main/foundry_character_compare.json",
   "download": "https://github.com/eyesonly760/foundry_character_compare/archive/refs/heads/main.zip",
