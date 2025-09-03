@@ -15,6 +15,7 @@
     "maximum": "13"
   },
   "esmodules": ["scripts/foundry_character_compare.js"],
+  "styles": ["styles/foundry_character_compare.css"],
 
   "manifest": "https://raw.githubusercontent.com/eyesonly760/foundry_character_compare/main/foundry_character_compare.json",
   "download": "https://github.com/eyesonly760/foundry_character_compare/archive/refs/heads/main.zip",

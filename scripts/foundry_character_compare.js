@@ -1,16 +1,13 @@
-// Register the module's custom application and hook it into the Actor Directory.
-Hooks.on("renderActorDirectory", (app, html, data) => {
-    // Create a button to open the Character Sheet Diff Tool
+Hooks.once("ready", () => {
+  Hooks.on("renderActorDirectory", (app, html, data) => {
     const button = $(`<button class="character-diff-button"><i class="fas fa-not-equal"></i> Diff Sheets</button>`);
 
-    // Attach an event listener to the button
     button.on('click', () => {
-        // Instantiate and render your custom diff application
-        new CharacterDiffApp().render(true);
+      new CharacterDiffApp().render(true);
     });
 
-    // Prepend the button to the header of the Actor Directory
     html.find(".directory-header").prepend(button);
+  });
 });
 
 /**
