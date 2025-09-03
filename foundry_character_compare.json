@@ -3,8 +3,8 @@
   "title": "Character Sheet Diff Tool",
   "description": "Compares two character sheets to highlight differences.",
   "version": "0.0.1",
-  "minimumCoreVersion": "0.8.8", // Adjust based on your Foundry version
-  "compatibleCoreVersion": "13", // Adjust based on your Foundry version
+  "minimumCoreVersion": "0.8.8",
+  "compatibleCoreVersion": "13",
   "author": "Your Name",
   "scripts": [
     "scripts/character-sheet-diff.js"
