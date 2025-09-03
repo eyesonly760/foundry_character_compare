@@ -1,12 +1,12 @@
 Hooks.once("ready", () => {
   Hooks.on("renderActorDirectory", (app, html, data) => {
-    const button = $(`<button class="character-diff-button"><i class="fas fa-not-equal"></i> Diff Sheets</button>`);
+    let button = $(`<button class="character-diff-button"><i class="fas fa-not-equal"></i> Diff Sheets</button>`);
 
     button.on('click', () => {
       new CharacterDiffApp().render(true);
     });
 
-    html.find(".directory-header").prepend(button);
+    $(html).find(".header-actions").prepend(button);
   });
 });
 
