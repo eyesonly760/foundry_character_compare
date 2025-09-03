@@ -1,5 +1,5 @@
 {
-  "id": "foundry-character-compare",
+  "id": "foundry_character_compare",
   "title": "Foundry Character Compare",
   "description": "A module that lets you compare characters in Foundry VTT.",
   "version": "1.0.0",
