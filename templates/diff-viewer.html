@@ -1,0 +1,52 @@
+<form class="flexcol character-diff-form">
+    <div class="form-group flexrow">
+        <label for="actor1-select">Actor 1:</label>
+        <select id="actor1-select" name="actor1Id">
+            <option value="">-- Select Actor 1 --</option>
+            {{#each actors}}
+            <option value="{{this.id}}" {{#if (eq ../actor1.id this.id)}}selected{{/if}}>{{this.name}}</option>
+            {{/each}}
+        </select>
+    </div>
+
+    <div class="form-group flexrow">
+        <label for="actor2-select">Actor 2:</label>
+        <select id="actor2-select" name="actor2Id">
+            <option value="">-- Select Actor 2 --</option>
+            {{#each actors}}
+            <option value="{{this.id}}" {{#if (eq ../actor2.id this.id)}}selected{{/if}}>{{this.name}}</option>
+            {{/each}}
+        </select>
+    </div>
+
+    {{#if differences}}
+    <h3>Differences:</h3>
+    <div class="diff-results">
+        {{#each differences}}
+        <div class="diff-item diff-{{this.status}}">
+            <h4>{{this.key}} ({{this.status}})</h4>
+            {{#if (eq this.status "changed")}}
+            <div class="diff-value diff-value-1">
+                <strong>Actor 1:</strong> <pre>{{json this.value1}}</pre>
+            </div>
+            <div class="diff-value diff-value-2">
+                <strong>Actor 2:</strong> <pre>{{json this.value2}}</pre>
+            </div>
+            {{/if}}
+            {{#if (eq this.status "removed")}}
+            <div class="diff-value diff-value-1">
+                <strong>Actor 1 (Removed):</strong> <pre>{{json this.value1}}</pre>
+            </div>
+            {{/if}}
+            {{#if (eq this.status "added")}}
+            <div class="diff-value diff-value-2">
+                <strong>Actor 2 (Added):</strong> <pre>{{json this.value2}}</pre>
+            </div>
+            {{/if}}
+        </div>
+        {{/each}}
+    </div>
+    {{else if actor1Id}}
+    <p>No differences found between selected actors, or actors not fully selected.</p>
+    {{/if}}
+</form>

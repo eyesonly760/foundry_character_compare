@@ -1,0 +1,66 @@
+#character-diff-app .character-diff-form {
+    padding: 10px;
+}
+
+#character-diff-app .form-group {
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#character-diff-app .form-group label {
+    flex: 0 0 100px;
+    margin-right: 10px;
+}
+
+#character-diff-app .form-group select {
+    flex: 1;
+}
+
+#character-diff-app .diff-results {
+    border: 1px solid #7a7971;
+    background: rgba(0, 0, 0, 0.05);
+    padding: 10px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+#character-diff-app .diff-item {
+    padding: 5px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+}
+
+#character-diff-app .diff-item h4 {
+    margin: 0 0 5px 0;
+    font-size: 1em;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    padding-bottom: 3px;
+}
+
+#character-diff-app .diff-added {
+    background-color: #e6ffe6; /* Light green */
+    border-left: 5px solid #4CAF50; /* Green */
+}
+
+#character-diff-app .diff-removed {
+    background-color: #ffe6e6; /* Light red */
+    border-left: 5px solid #f44336; /* Red */
+}
+
+#character-diff-app .diff-changed {
+    background-color: #fffacd; /* Light yellow */
+    border-left: 5px solid #ff9800; /* Orange */
+}
+
+#character-diff-app .diff-value pre {
+    white-space: pre-wrap;
+    word-break: break-all;
+    font-size: 0.8em;
+    background: rgba(0,0,0,0.05);
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.character-diff-button {
+    margin-right: 5px;
+}
